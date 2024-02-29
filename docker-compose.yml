@@ -1,0 +1,11 @@
+services:
+  x3:
+    ports:
+      - 8080:80
+    volumes:
+      - /mnt/docker/x3/_cache:/var/www/html/_cache
+      - /mnt/docker/x3/content:/var/www/html/content
+      - /mnt/docker/x3/render:/var/www/html/render
+      - /mnt/docker/x3/panel/filemanager_error_log.txt:/var/www/html/panel/filemanager_error_log.txt
+    restart: always
+    image: x3:latest
